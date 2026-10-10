@@ -1,6 +1,6 @@
 # CareerQuest
 
-A playful career-discovery game: choose a character, take the discovery quest, try a day in the life of a career, and watch your matches evolve. Next.js 15 frontend; see `../backend` for the FastAPI + Supabase API.
+A playful career-discovery game: choose a character, explore your Learning DNA, try a day in the life of a career, and watch your matches evolve. Next.js 15 frontend; see `../backend` for the FastAPI + Supabase API.
 
 ## Run
 ```bash
@@ -15,8 +15,8 @@ Push to GitHub, import the repo in Vercel, and deploy. Set `NEXT_PUBLIC_API_URL`
 - `app/` – layout, page, global styles (colors and tokens in `globals.css`)
 - `components/providers/` – auth and progress state
 - `components/auth/` – log in, sign up (with character pick), guest mode
-- `components/quest/` – app shell and views (journey, discovery, careers, simulation, reflection, roadmap, profile)
-- `lib/data/` – characters, discovery questions, careers and scenarios (edit these to add content)
+- `components/quest/` – app shell and views (journey, careers, simulation, reflection, roadmap, profiler, mentor, profile)
+- `lib/data/` – characters, careers and scenarios (edit these to add content)
 - `lib/scoring.ts` – trait scoring, Ikigai fit, XP, badges
 - `lib/auth.ts` – browser-only accounts (see note)
 

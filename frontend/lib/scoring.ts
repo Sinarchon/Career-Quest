@@ -1,21 +1,14 @@
 import { CAREERS, careerById } from '@/lib/data/careers';
 import { CHARACTERS } from '@/lib/data/characters';
-import { QUESTIONS } from '@/lib/data/questions';
 import { TRAITS, type Career, type Evidence, type Progress, type Quality, type Trait } from '@/lib/types';
 
 const clamp = (n: number) => Math.max(0, Math.min(100, Math.round(n)));
 
-/** Trait values (0–98). Character choice seeds them; each discovery answer adds 2 to a primary and 1 to a secondary trait. */
-export function traitValues(character: number | null, answers: number[]): Record<Trait, number> {
+/** Trait values (0–98). The character choice seeds them; simulation evidence refines the fit from there. */
+export function traitValues(character: number | null): Record<Trait, number> {
   const raw = Object.fromEntries(TRAITS.map(t => [t, 0])) as Record<Trait, number>;
   const seed = character !== null ? CHARACTERS[character]?.seed : undefined;
   if (seed) for (const t of TRAITS) raw[t] += seed[t] ?? 0;
-  answers.forEach((choice, i) => {
-    const answer = QUESTIONS[i]?.answers[choice];
-    if (!answer) return;
-    raw[answer.primary] += 2;
-    if (answer.secondary) raw[answer.secondary] += 1;
-  });
   return Object.fromEntries(TRAITS.map(t => [t, Math.min(98, 50 + raw[t] * 4)])) as Record<Trait, number>;
 }
 
@@ -105,7 +98,7 @@ const XP_PER_LEVEL = 200;
 
 export function computeXp(p: Progress): number {
   const taskCount = Object.values(p.tasks).reduce((n, list) => n + list.length, 0);
-  return (p.character !== null ? 50 : 0) + p.answers.length * 25 + p.evidence.length * 100 + taskCount * 10 + p.journal.length * 30 + p.explored.length * 5;
+  return (p.character !== null ? 50 : 0) + p.evidence.length * 100 + taskCount * 10 + p.journal.length * 30 + p.explored.length * 5;
 }
 
 export function levelInfo(xp: number) {
@@ -125,7 +118,6 @@ export function computeBadges(p: Progress): Badge[] {
   const fullRoadmap = Object.values(p.tasks).some(list => list.length >= 12);
   return [
     { id: 'character', name: 'First steps', hint: 'Choose your character', earned: p.character !== null },
-    { id: 'discovery', name: 'Self-aware', hint: 'Finish the discovery quest', earned: p.answers.length >= QUESTIONS.length },
     { id: 'curious', name: 'Curious mind', hint: 'Look closely at 3 careers', earned: p.explored.length >= 3 },
     { id: 'simulate', name: 'First day on the job', hint: 'Complete a day in the life', earned: p.evidence.length >= 1 },
     { id: 'range', name: 'Wide lens', hint: 'Try 3 different careers', earned: new Set(p.evidence.map(e => e.careerId)).size >= 3 },

@@ -27,7 +27,7 @@ export function ProfileView() {
       <div className="eyebrow"><Award size={14} />Badges · {earned} of {badges.length}</div>
       <div className="badge-grid mt-4">{badges.map(b => <div key={b.id} className={`badge ${b.earned ? 'earned' : ''}`}><div className="medal"><Award size={20} /></div><strong>{b.name}</strong><small>{b.earned ? 'Earned' : b.hint}</small></div>)}</div>
     </section>
-    <section className="workspace"><h2 style={{ marginTop: 0 }}>Your character</h2><p>Switch any time. Your discovery answers stay the same.</p><CharacterCards compact /></section>
+    <section className="workspace"><h2 style={{ marginTop: 0 }}>Your character</h2><p>Switch any time. Your Learning DNA profile stays the same.</p><CharacterCards compact /></section>
     <section className="workspace">
       <h2 style={{ marginTop: 0 }}>Your data</h2>
       <div className="pill-row">

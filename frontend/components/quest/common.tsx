@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import type { Career, IconKey } from '@/lib/types';
 import { useProgress } from '@/components/providers/progress-provider';
 
-export type View = 'journey' | 'discovery' | 'careers' | 'simulation' | 'reflection' | 'plan' | 'profile' | 'profiler' | 'mentor';
+export type View = 'journey' | 'careers' | 'simulation' | 'reflection' | 'plan' | 'profile' | 'profiler' | 'mentor';
 
 export type NavApi = {
   view: View;
@@ -76,13 +76,14 @@ export function CharacterCards({ compact = false }: { compact?: boolean }) {
 }
 
 export function SenseiPanel({ className = '' }: { className?: string }) {
-  const { progress, discovered, ranked } = useProgress();
+  const { progress, profiled, ranked } = useProgress();
   const { go, startSim } = useNav();
   const hasEvidence = progress.evidence.length > 0;
+  const dnaStarted = Object.keys(progress.dna.answers).length > 0;
   const character = progress.character !== null ? CHARACTERS[progress.character] : null;
   const tip = character ? `${character.name} is a starting point, not a box. Your experiences will help shape your path.` : 'Choose a character that feels like you today. You can always grow into someone new.';
-  const next = !discovered
-    ? { title: progress.answers.length ? 'Pick up your quest' : 'The Discovery Quest', sub: `${8 - progress.answers.length} questions left · About 3 minutes`, cta: progress.answers.length ? 'Keep going' : 'Let’s discover you', run: () => go('discovery') }
+  const next = !profiled
+    ? { title: dnaStarted ? 'Pick up your profile' : 'The Learning DNA Profiler', sub: dnaStarted ? 'Your next story is waiting' : '7 short stories · About 10-15 decisions', cta: dnaStarted ? 'Keep going' : 'Discover how you think', run: () => go('profiler') }
     : !hasEvidence
       ? { title: 'Try a day in the life', sub: '2 scenes · A new perspective', cta: 'Try a simulation', run: () => startSim(ranked[0]!.career.id) }
       : { title: 'Plan your next 30 days', sub: '12 small steps · Make it yours', cta: 'Open my roadmap', run: () => go('plan') };

@@ -11,7 +11,7 @@ import { JOURNAL_PROMPTS } from '@/lib/roadmap';
 import { classifyEvidence } from '@/lib/scoring';
 
 export function ReflectionView() {
-  const { progress, ranked, discovered, dispatch } = useProgress();
+  const { progress, ranked, profiled, dispatch } = useProgress();
   const { go, startSim } = useNav();
   const [text, setText] = useState('');
   const prompt = JOURNAL_PROMPTS[progress.journal.length % JOURNAL_PROMPTS.length]!;
@@ -34,7 +34,7 @@ export function ReflectionView() {
         <div className="eyebrow"><BookOpen size={14} />Evidence timeline</div>
         <h2>The moments behind your matches</h2>
         <div className="evidence-item"><strong>{progress.character !== null ? `${CHARACTERS[progress.character]!.name} selected` : 'No character chosen yet'}</strong><p>Starting preference · Tentative, self-reported</p></div>
-        {discovered && <div className="evidence-item"><strong>Discovery quest completed</strong><p>Eight reflection prompts shaped your preference profile.</p></div>}
+        {profiled && <div className="evidence-item"><strong>Learning DNA profile completed</strong><p>Your branching profiler responses shaped your strength profile.</p></div>}
         {[...progress.evidence].reverse().map(ev => { const c = classifyEvidence(ev); const career = careerById(ev.careerId); return <div className="evidence-item" key={ev.id}>
           <strong>{career?.name ?? ev.careerId} · Simulation</strong>
           <p><span className="signal">{c.label}</span></p>

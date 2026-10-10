@@ -1,15 +1,13 @@
 'use client';
 import { createContext, useContext, useEffect, useMemo, useReducer, useState, type Dispatch, type ReactNode } from 'react';
 import { loadProgress, saveProgress } from '@/lib/storage';
-import { QUESTIONS } from '@/lib/data/questions';
+import { stageOf } from '@/lib/dna';
 import { computeBadges, computeXp, levelInfo, rankCareers, traitValues, type Badge, type Ranked } from '@/lib/scoring';
 import { emptyProgress, type Evidence, type JournalEntry, type Progress, type Trait } from '@/lib/types';
 
 type Action =
   | { type: 'hydrate'; progress: Progress }
   | { type: 'character'; index: number | null }
-  | { type: 'answer'; choice: number }
-  | { type: 'restartDiscovery' }
   | { type: 'evidence'; evidence: Evidence }
   | { type: 'toggleTask'; careerId: string; taskId: string }
   | { type: 'journalAdd'; entry: JournalEntry }
@@ -26,8 +24,6 @@ function reducer(state: Progress, action: Action): Progress {
   switch (action.type) {
     case 'hydrate': return action.progress;
     case 'character': return { ...state, character: action.index };
-    case 'answer': return state.answers.length >= QUESTIONS.length ? state : { ...state, answers: [...state.answers, action.choice] };
-    case 'restartDiscovery': return { ...state, answers: [] };
     case 'evidence': return { ...state, evidence: [...state.evidence, action.evidence] };
     case 'toggleTask': {
       const current = state.tasks[action.careerId] ?? [];
@@ -51,7 +47,8 @@ type ProgressContextValue = {
   dispatch: Dispatch<Action>;
   loaded: boolean;
   traits: Record<Trait, number>;
-  discovered: boolean;
+  /** True once the Learning DNA profiler has been completed. */
+  profiled: boolean;
   hasSignal: boolean;
   ranked: Ranked[];
   xp: number;
@@ -79,12 +76,12 @@ export function ProgressProvider({ userId, children }: { userId: string; childre
   }, [progress, loaded, userId]);
 
   const value = useMemo<ProgressContextValue>(() => {
-    const traits = traitValues(progress.character, progress.answers);
+    const traits = traitValues(progress.character);
     const xp = computeXp(progress);
     return {
       progress, dispatch, loaded, traits,
-      discovered: progress.answers.length >= QUESTIONS.length,
-      hasSignal: progress.character !== null || progress.answers.length > 0,
+      profiled: stageOf(progress.dna).kind === 'done',
+      hasSignal: progress.character !== null || Object.keys(progress.dna.answers).length > 0,
       ranked: rankCareers(traits, progress.evidence),
       xp, level: levelInfo(xp), badges: computeBadges(progress),
     };

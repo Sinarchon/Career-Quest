@@ -4,12 +4,12 @@ import { classifyEvidence, rankCareers, traitValues } from '@/lib/scoring';
 import { TRAITS, TRAIT_LABELS, type Progress } from '@/lib/types';
 
 export function buildReport(name: string, p: Progress): string {
-  const traits = traitValues(p.character, p.answers);
+  const traits = traitValues(p.character);
   const ranked = rankCareers(traits, p.evidence);
   const lines: string[] = [];
   lines.push(`# CareerQuest report for ${name}`, '', `Generated ${new Date().toLocaleDateString()}`, '');
   lines.push('## Starting character', p.character !== null ? `${CHARACTERS[p.character]?.name}. A starting point, not a label.` : 'Not chosen yet.', '');
-  lines.push('## Preference profile (self-reported)', ...TRAITS.map(t => `- ${TRAIT_LABELS[t]}: ${traits[t]}/100`), '');
+  lines.push('## Starting preference profile (from your character)', ...TRAITS.map(t => `- ${TRAIT_LABELS[t]}: ${traits[t]}/100`), '');
   lines.push('## Career fit', ...ranked.map((r, i) => `${i + 1}. ${r.career.name}: ${r.score.overall}% fit (${r.delta >= 0 ? '+' : ''}${r.delta} from simulations)`), '');
   lines.push('## Evidence from simulations');
   if (!p.evidence.length) lines.push('No simulations completed yet.');
