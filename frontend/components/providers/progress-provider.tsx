@@ -1,6 +1,7 @@
 'use client';
-import { createContext, useContext, useEffect, useMemo, useReducer, useState, type Dispatch, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useMemo, useReducer, useRef, useState, type Dispatch, type ReactNode } from 'react';
 import { loadProgress, saveProgress } from '@/lib/storage';
+import { createSaveQueue } from '@/lib/save-queue';
 import { stageOf } from '@/lib/dna';
 import { computeBadges, computeXp, levelInfo, rankCareers, traitValues, type Badge, type Ranked } from '@/lib/scoring';
 import { emptyProgress, type Evidence, type JournalEntry, type Progress, type Trait } from '@/lib/types';
@@ -69,6 +70,9 @@ const ProgressContext = createContext<ProgressContextValue | null>(null);
 export function ProgressProvider({ userId, children }: { userId: string; children: ReactNode }) {
   const [progress, dispatch] = useReducer(reducer, undefined, emptyProgress);
   const [loaded, setLoaded] = useState(false);
+  const saveQueue = useMemo(createSaveQueue, [userId]);
+  const latestProgress = useRef(progress);
+  latestProgress.current = progress;
 
   useEffect(() => {
     let alive = true;
@@ -79,9 +83,13 @@ export function ProgressProvider({ userId, children }: { userId: string; childre
 
   useEffect(() => {
     if (!loaded) return;
-    const t = setTimeout(() => { void saveProgress(userId, progress); }, userId === 'guest' ? 0 : 800); // debounce server saves
+    const snapshot = progress;
+    const t = setTimeout(() => {
+      void saveQueue(() => saveProgress(userId, snapshot), () => latestProgress.current === snapshot)
+        .catch(error => console.error('Could not save progress', error));
+    }, userId === 'guest' ? 0 : 800); // debounce server saves
     return () => clearTimeout(t);
-  }, [progress, loaded, userId]);
+  }, [progress, loaded, userId, saveQueue]);
 
   const value = useMemo<ProgressContextValue>(() => {
     const traits = traitValues(progress.character);

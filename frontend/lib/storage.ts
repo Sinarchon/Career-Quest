@@ -31,6 +31,9 @@ export async function loadProgress(userId: string): Promise<Progress> {
 }
 
 export async function saveProgress(userId: string, progress: Progress) {
-  if (userId === 'guest') return void write(`progress:${userId}`, progress);
-  try { await api('/progress', { method: 'PUT', body: progress }); } catch { /* retried on the next change */ }
+  if (userId === 'guest') {
+    if (!write(`progress:${userId}`, progress)) throw new Error('Browser could not save your progress.');
+    return;
+  }
+  await api('/progress', { method: 'PUT', body: progress });
 }

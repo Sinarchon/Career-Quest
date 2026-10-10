@@ -16,11 +16,35 @@ async function call<T>(p: Promise<T>): Promise<T> {
   }
 }
 
+/** Per-field rules, so the form can validate live and signUp() still validates in one go. */
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export function nameProblem(name: string): string | null {
+  return name.trim().length < 2 ? 'Tell us what to call you (at least 2 characters).' : null;
+}
+
+export function emailProblem(email: string): string | null {
+  return EMAIL_RE.test(email.trim()) ? null : 'Enter a valid email address, like name@example.com.';
+}
+
+export function passwordProblem(password: string): string | null {
+  return password.length < 8 ? 'Use at least 8 characters for your password.' : null;
+}
+
 export function validateSignUp(name: string, email: string, password: string): string | null {
-  if (name.trim().length < 2) return 'Tell us what to call you (at least 2 characters).';
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return 'Enter a valid email address, like name@example.com.';
-  if (password.length < 8) return 'Use at least 8 characters for your password.';
-  return null;
+  return nameProblem(name) ?? emailProblem(email) ?? passwordProblem(password);
+}
+
+/** A length-and-variety hint for the strength meter, not a measure of entropy. */
+export function passwordStrength(password: string): { score: 0 | 1 | 2 | 3; label: string } {
+  if (!password) return { score: 0, label: '' };
+  const classes = [/[a-z]/, /[A-Z]/, /\d/, /[^A-Za-z0-9]/].filter(re => re.test(password)).length;
+  let score = 0;
+  if (password.length >= 8) score++;
+  if (password.length >= 12) score++;
+  if (classes >= 3) score++;
+  const label = password.length < 8 ? 'Too short' : score >= 3 ? 'Strong' : score === 2 ? 'Fair' : 'Weak';
+  return { score: Math.min(score, 3) as 0 | 1 | 2 | 3, label };
 }
 
 export async function getSessionUser(): Promise<User | null> {
