@@ -51,11 +51,6 @@ export type Career = {
   scenes: [Scene, Scene];
 };
 
-export type Question = {
-  title: string;
-  answers: { text: string; primary: Trait; secondary?: Trait }[];
-};
-
 export type Decision = {
   scene: number;
   text: string;
@@ -79,7 +74,6 @@ export type JournalEntry = { id: string; at: string; prompt: string; text: strin
 export type Progress = {
   v: 1;
   character: number | null;
-  answers: number[];
   evidence: Evidence[];
   tasks: Record<string, string[]>;
   journal: JournalEntry[];
@@ -91,7 +85,6 @@ export type Progress = {
 export const emptyProgress = (): Progress => ({
   v: 1,
   character: null,
-  answers: [],
   evidence: [],
   tasks: {},
   journal: [],

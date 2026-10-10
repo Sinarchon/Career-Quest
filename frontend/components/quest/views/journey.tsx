@@ -10,12 +10,13 @@ import { cn } from '@/lib/utils';
 const STEPS = ['Discover', 'Explore', 'Simulate', 'Reflect', 'Evolve', 'Plan'];
 
 export function JourneyView() {
-  const { progress, discovered, hasSignal, ranked, level } = useProgress();
+  const { progress, profiled, hasSignal, ranked, level } = useProgress();
   const { go } = useNav();
   const character = progress.character !== null ? CHARACTERS[progress.character] : null;
+  const dnaStarted = Object.keys(progress.dna.answers).length > 0;
   const planStarted = Object.values(progress.tasks).some(t => t.length > 0);
-  const current = planStarted ? 5 : progress.evidence.length ? 4 : discovered ? 2 : hasSignal ? 1 : 0;
-  const doneUpTo = progress.evidence.length ? 3 : discovered ? 1 : 0;
+  const current = planStarted ? 5 : progress.evidence.length ? 4 : profiled ? 2 : hasSignal ? 1 : 0;
+  const doneUpTo = progress.evidence.length ? 3 : profiled ? 1 : 0;
 
   return <>
     <section className="hero" aria-label="Welcome to CareerQuest">
@@ -24,7 +25,7 @@ export function JourneyView() {
         <div className="eyebrow"><Sprout size={14} />Your journey to Ikigai</div>
         <h2>Find your spark.<br />Forge your path.</h2>
         <p>Discover what you love, try who you could be, and build a future that feels like you.</p>
-        <Button onClick={() => go('discovery')}>{discovered ? 'Revisit your discovery' : progress.answers.length ? 'Continue your quest' : 'Begin your discovery'} <ArrowRight /></Button>
+        <Button onClick={() => go('profiler')}>{profiled ? 'Revisit your profile' : dnaStarted ? 'Continue your profile' : 'Begin your Learning DNA'} <ArrowRight /></Button>
       </div>
     </section>
     <ol className="journey" aria-label="Journey stages" style={{ listStyle: 'none', margin: 0, padding: '0 4px 22px' }}>
@@ -52,7 +53,7 @@ export function JourneyView() {
         </section>
         <section className="matches-section">
           <div className="section-heading">
-            <div><h2>{hasSignal ? 'Your top possibilities' : 'A peek at your possibilities'}</h2><p>{hasSignal ? 'Early matches from your answers. Keep exploring.' : 'Choose a character to start matching.'}</p></div>
+            <div><h2>{hasSignal ? 'Your top possibilities' : 'A peek at your possibilities'}</h2><p>{hasSignal ? 'Early matches from your character. Simulations sharpen them.' : 'Choose a character to start matching.'}</p></div>
             <Button variant="link" className="h-auto p-0 text-sm" onClick={() => go('careers')}>Explore all <ArrowRight /></Button>
           </div>
           <div className="career-grid">{ranked.slice(0, 3).map(r => <CareerCard key={r.career.id} career={r.career} score={hasSignal ? r.score.overall : null} label={progress.evidence.length ? 'Updated with your feedback' : 'A possible path for you'} />)}</div>
