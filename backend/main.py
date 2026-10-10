@@ -251,3 +251,20 @@ async def rag_ask(b: Ask, req: Request, u=Depends(current)):
 
 @app.get("/health")
 async def health(): return {"ok": True}
+@app.get("/debug-smtp")
+def debug_smtp(to: str = ""):
+    info = {
+        "host": os.environ.get("SMTP_HOST", ""),
+        "port": os.environ.get("SMTP_PORT", ""),
+        "user": os.environ.get("SMTP_USER", ""),
+        "pass_set": bool(os.environ.get("SMTP_PASS")),
+        "from": os.environ.get("SMTP_FROM", ""),
+        "front": os.environ.get("FRONTEND_URL", ""),
+    }
+    if to:
+        try:
+            send_mail(to, "Vercel SMTP test", "Sent from the deployed backend.")
+            info["result"] = "SENT"
+        except Exception as e:
+            info["result"] = f"ERROR: {type(e).__name__}: {e}"
+    return info
