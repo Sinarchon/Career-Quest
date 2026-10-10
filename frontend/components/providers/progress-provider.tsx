@@ -18,6 +18,10 @@ type Action =
   | { type: 'dnaSet'; patch: Partial<Progress['dna']> }
   | { type: 'dnaBack' }
   | { type: 'dnaReset' }
+  | { type: 'interestAnswer'; id: string; rating: number }
+  | { type: 'country'; country: Progress['country'] }
+  | { type: 'statedInterests'; text: string }
+  | { type: 'skillsAndProjects'; text: string }
   | { type: 'reset' };
 
 function reducer(state: Progress, action: Action): Progress {
@@ -38,6 +42,10 @@ function reducer(state: Progress, action: Action): Progress {
     case 'dnaSet': return { ...state, dna: { ...state.dna, ...action.patch } };
     case 'dnaBack': { const a = { ...state.dna.answers }; delete a[Object.keys(a).pop() ?? '']; return { ...state, dna: { answers: a, tie: null, recon: null } }; }
     case 'dnaReset': return { ...state, dna: emptyProgress().dna };
+    case 'interestAnswer': return { ...state, interests: { ...state.interests, [action.id]: action.rating } };
+    case 'country': return { ...state, country: action.country };
+    case 'statedInterests': return { ...state, statedInterests: action.text };
+    case 'skillsAndProjects': return { ...state, skillsAndProjects: action.text };
     case 'reset': return emptyProgress();
   }
 }
