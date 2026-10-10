@@ -86,6 +86,9 @@ export function AppShell() {
   const avatar = character ? <img src={character.image} alt="" /> : initials;
   const label = NAV.find(n => n.id === view)?.label;
 
+  // The questionnaire takes over the whole screen: no sidebar, navigation, references or footer.
+  if (view === 'profiler') return <NavContext.Provider value={nav}><ProfilerView /></NavContext.Provider>;
+
   return <NavContext.Provider value={nav}>
     <div className="app-shell">
       <aside className={cn('sidebar', mobileOpen && 'open')}>
@@ -121,7 +124,6 @@ export function AppShell() {
             {view === 'reflection' && <ReflectionView />}
             {view === 'plan' && <RoadmapView />}
             {view === 'profile' && <ProfileView />}
-            {view === 'profiler' && <ProfilerView />}
             {view === 'mentor' && <MentorView />}
           </div>
           <References />
