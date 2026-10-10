@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "frontend/package.json",
+      "use": "next"
+    },
+    {
       "src": "backend/main.py",
       "use": "python",
       "config": {
@@ -17,6 +21,7 @@
     }
   ],
   "env": {
+    "API_ORIGIN": "@api_origin",
     "DATABASE_URL": "@database_url",
     "JWT_SECRET": "@jwt_secret",
     "ANTHROPIC_API_KEY": "@anthropic_api_key"
