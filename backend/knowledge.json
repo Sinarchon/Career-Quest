@@ -1,0 +1,350 @@
+[
+ {
+  "title": "Design philosophy",
+  "text": "# The Learning DNA Profiler: A Comprehensive Scenario-Based Intelligence Assessment Questionnaire"
+ },
+ {
+  "title": "Design philosophy",
+  "text": "## Design Philosophy and Rationale"
+ },
+ {
+  "title": "Design philosophy",
+  "text": "Traditional self-report questionnaires suffer from significant validity limitations. Research establishes that the correlation between self-estimated and psychometrically measured cognitive ability is only r = .33 (Coetzee, 2008), demonstrating that asking users to \"rate yourself\" yields unreliable data. Furthermore, self-reported measures are affected by \"social desirability bias, inaccurate self-assessment, confirmation bias, and differences in students' awareness of their own abilities\" (Tountopoulou et al., 2021). The Tic-Tac-Toe Game Playing Career Guidance System demonstrated that behavioral interaction—observing what users *do* rather than what they *say*—can effectively assess intelligence, patience, learning ability, and problem-solving speed Lubinski (2004). Game-based and scenario-based assessment captures psychological factors through performance rather than introspection."
+ },
+ {
+  "title": "Design philosophy",
+  "text": "The questionnaire below therefore employs immersive scenario-based branching, where each response reveals cognitive tendencies, and subsequent scenarios adapt based on prior answers. The Multi-Dimensional Psychometric Alignment (MDPA) framework validates this multi-dimensional approach, jointly integrating cognitive preferences, cognitive modalities (Gardner's Multiple Intelligences including \"logical-mathematical, linguistic, spatial, interpersonal, intrapersonal, musical, bodily-kinesthetic, naturalistic, and existential tendencies\"), and personality stability Banai & Perin (2016). The APIS intelligence test similarly measures abstract-logical, verbal, visual-spatial, and social abilities as predictors of career paths (Satterly, 1976)."
+ },
+ {
+  "title": "Design philosophy",
+  "text": "Each scenario is scored across multiple intelligence dimensions simultaneously. Scoring uses a weighted multi-dimensional rubric where responses earn points (0–5) across relevant intelligence axes. Some intelligences carry higher weight in career-critical contexts, reflecting the established finding that cognitive abilities are organized hierarchically, with general intelligence at the vertex, while specific abilities refine longitudinal forecasts (Gottfredson, 2003)."
+ },
+ {
+  "title": "Scenario 1.1: The Unfamiliar City",
+  "text": "You have just arrived in a city you have never visited before. You need to reach a meeting point across town within 90 minutes. You have a paper map, a written set of directions from a local, and you can see a tall landmark tower in the distance. Your phone has died. What do you do first? (A) Study the paper map, mentally rotating it to align with your current orientation, and plot a route using the landmark tower as a reference point. (B) Read through the written directions carefully, memorizing the sequence of street names and turns described. (C) Approach a group of people nearby and ask them to walk you through the best route, reading their body language to judge how confident they are in their directions. (D) Start walking toward the landmark tower, reasoning that if you maintain a consistent direction and track the logical grid pattern of streets, you will converge on the destination. (E) Look around for environmental patterns—notice which direction foot traffic flows, where commercial activity clusters, and infer the city center's location from these cues. Rationale: Research confirms that spatial ability is separable from general ability factors (Skarzyński & Noworol, 2022), and that field independence contributes independently to problem-solving. The map-rotation option (A) directly taps mental rotation and spatial visualization—capacities measured by instruments like the Purdue Spatial Visualization Test (Gimena et al., 2015). Option C assesses interpersonal intelligence, which Gardner defines as the ability to understand and interact effectively with others Zainudin et al. (2024). The branching logic proceeds based on the user's dominant response pattern."
+ },
+ {
+  "title": "Scenario 1.1A: Spatial Dominant Path",
+  "text": "You orient the map successfully and begin walking. After 15 minutes, you reach a complex intersection where five streets converge at odd angles. The map shows this intersection but the scale makes it difficult to determine which street is which. Three of the streets look nearly identical from where you stand. How do you determine which street to take? (A1) Mentally reconstruct a three-dimensional model of the intersection from the two-dimensional map, comparing angles between streets on the map to what you see. (A2) Walk a short distance down each candidate street, checking whether the buildings and features match what the map predicts should appear next. (A3) Count the streets clockwise from the direction you arrived and match that to the map's orientation. Rationale: This branch deepens spatial assessment. Research using the Object-Spatial Imagery and Verbal Questionnaire (OSIVQ) distinguishes between object imagery (pictorial appearances) and spatial imagery (spatial relations and transformations) (Almufareh & Almaleh, 2026; . Response A1 taps spatial visualization specifically—\"schematic images, spatial relations amongst objects and spatial transformations\" (Almufareh & Almaleh, 2026; —while A2 introduces bodily-kinesthetic exploration."
+ },
+ {
+  "title": "Scenario 1.1C: Social Intelligence Dominant Path",
+  "text": "The group you approached includes three people. One gives you confident, detailed directions while making steady eye contact. Another interrupts with a contradictory route, speaking quickly and gesturing vaguely. The third person stays quiet but subtly shakes their head when the second person speaks. What do you do? (C1) Follow the first person's directions because their confident demeanor and eye contact suggest familiarity with the area. (C2) Ask the quiet third person directly what they think, since their subtle head-shake suggests they have knowledge but are socially deferring to the louder speaker. (C3) Ask all three to reach a consensus before you proceed, facilitating a brief discussion. (C4) Ignore the social dynamics entirely and ask each person to point in the direction of a well-known landmark to triangulate the correct route. Rationale: Interpersonal intelligence encompasses understanding others' motivations and feelings, while intrapersonal intelligence involves understanding one's own Zainudin et al. (2024). Response C2 demonstrates advanced social perception—reading non-verbal micro-cues and understanding social hierarchies within groups. Research on prosocial traits shows that object-oriented imagery is associated with empathy and the ability to be transported into others' perspectives (Song et al., 2026). This scenario assesses whether the user reads implicit social information (C2), relies on explicit social signals (C1), or defaults to non-social problem-solving (C4)."
+ },
+ {
+  "title": "Scenario 2.1: The Data Puzzle",
+  "text": "You are given a temporary job at the meeting point. Your task: a company has sales data from six regions over twelve months. The data is presented in three formats simultaneously—a spreadsheet of numbers, a set of colored bar charts, and a written narrative summary. You have 20 minutes to identify which region is underperforming and why. How do you approach this? (A) Go straight to the spreadsheet, calculate percentage changes month-over-month, and look for statistical anomalies. (B) Scan the bar charts first, looking for visual patterns—dips, trends, color-coded outliers—before checking numbers. (C) Read the narrative summary first to understand the context, then verify claims against the data. (D) Compare all three formats simultaneously, cross-referencing to find inconsistencies between them. (E) Ask a colleague who has worked with this data before what they think, then verify their intuition against the evidence. Rationale: Intelligence reflects \"a broad capability for comprehending our surroundings, solving problems, planning, or learning from experience\" (Shen et al., 2026). The Differential Aptitude Test measures multiple subtests defining a cognitive profile, based on the premise that human intelligence comprises many different levels of proficiency (Srianturi & Supriatna, 2020). Response D, which integrates multiple information modalities, reflects the highest general cognitive ability as it requires simultaneous processing across representational systems. Research on cognitive styles confirms that visualizers favor pictorial and spatial representations while verbalizers prefer linguistic formats (Akos et al., 2004), making format preference a reliable indicator of cognitive style."
+ },
+ {
+  "title": "Scenario 2.1A: Logical-Mathematical Deep Dive",
+  "text": "You discover that Region 4 shows a 23% decline in Q3. The spreadsheet reveals that three product categories dropped simultaneously. However, Region 4's customer count actually increased by 8% during the same period. What is your immediate hypothesis? (A1) The average transaction value decreased—more customers buying less per visit—suggesting a pricing or product mix problem. (A2) There may be a data entry error, since increasing customers and decreasing sales is unusual enough to warrant verification. (A3) A competitor entered the market in Q3, capturing the higher-value customers while Region 4 retained only lower-spending ones. (A4) Seasonal factors specific to Region 4's geography may explain the pattern—you look for whether this happened in previous years. Rationale: Fluid intelligence—the ability to perceive relationships independent of prior learning—is assessed through novel problem-solving Coertse & Schepers, 2004). Response A1 demonstrates deductive reasoning from available data. Response A3 introduces creative hypothesis generation, reflecting practical and creative intelligence necessary for career success Zainudin et al. (2024). Response A4 demonstrates pattern recognition across temporal contexts, tapping naturalistic intelligence (recognizing patterns in complex systems)."
+ },
+ {
+  "title": "Scenario 2.2: The Design Challenge",
+  "text": "Your next task requires you to redesign the layout of a small retail space. You are given the room dimensions (8m × 12m), the inventory of display units (varying sizes), and the constraint that customers must be able to reach any product within 30 seconds of entering. You also know that 60% of customers are right-handed and tend to turn right upon entering. How do you begin? (A) Sketch a bird's-eye floor plan to scale, placing units and mentally simulating customer flow paths. (B) Build a mathematical model: calculate the maximum distance from the entrance to any point, then optimize unit placement to minimize average path length. (C) Think about how you personally feel when entering retail spaces—what makes you comfortable, what frustrates you—and design from that emotional intuition. (D) Research how successful retail spaces are designed, looking for established principles and best practices to apply. (E) Imagine yourself as different types of customers—elderly, hurried, browsing—and mentally walk through the space from each perspective. Rationale: Spatial visualization—\"the ability to perceive relationships independent of prior learning\" in spatial contexts Coertse & Schepers, 2004)—is directly assessed by option A. Research demonstrates that spatial imagery tendencies are stronger among students in sciences and engineering, with Physics Engineering students scoring highest (M=3.81) on spatial imagery scales (Steppan et al., 2026). Option E taps perspective-taking, a core component of interpersonal intelligence associated with empathy (Song et al., 2026)."
+ },
+ {
+  "title": "Scenario 3.1: The Conflict",
+  "text": "You are placed on a team of five to complete a project. During the first meeting, two team members immediately clash. Person X presents a detailed, data-driven plan and dismisses alternatives. Person Y advocates for a creative, unconventional approach and becomes visibly frustrated when X ignores their ideas. The other two members stay silent, looking uncomfortable. The deadline is in three days. What do you do? (A) Analyze both proposals objectively, identify the strengths of each, and present a merged plan that incorporates the best elements. (B) Address the emotional tension directly: acknowledge that both X and Y feel strongly, validate their perspectives, and facilitate a structured discussion where each person speaks uninterrupted. (C) Take charge and assign specific tasks to each person based on what you perceive their strengths to be, bypassing the conflict entirely. (D) Privately approach the two silent members to understand their views, then use that information to build a coalition for the best approach. (E) Step back and observe the dynamics for a while longer before intervening, trying to understand the underlying motivations driving each person's behavior. Rationale: Holland's RIASEC model identifies the Social and Enterprising dimensions as critical career-relevant constructs (Mrabet & Moussa, 2021). Personality and interest are determinants of career achievement within congruent environments (Mrabet & Moussa, 2021). Career maturity research shows that personality constructs—not cognitive constructs alone—differentiate career-mature from career-immature individuals (Tuccio et al., 2023), making social-emotional assessment essential. Response B demonstrates the highest interpersonal intelligence through explicit emotional validation and structured facilitation. Response E reflects intrapersonal intelligence—understanding one's own reactions and exercising metacognitive restraint."
+ },
+ {
+  "title": "Scenario 3.1B: High Social Intelligence Path",
+  "text": "You successfully facilitate the discussion. Person X softens and shares that they are anxious about the deadline because a previous project failure cost them a promotion. Person Y reveals they feel chronically undervalued in team settings. The two silent members now engage—one has a technical background and the other has client-facing experience. How do you structure the remaining work? (B1) Assign X to quality control and timeline management (leveraging their anxiety as vigilance), Y to ideation and creative direction (channeling their need for recognition), the technical member to implementation, and the client-facing member to presentation. (B2) Create pairs: X with the client-facing member (to balance X's rigidity with interpersonal skill) and Y with the technical member (to ground Y's creativity in feasibility). You coordinate. (B3) Let the team self-organize now that tensions are resolved, offering to help wherever needed. (B4) Propose that everyone works on every component together, rotating roles to build mutual understanding. Rationale: This branch assesses advanced social intelligence—the ability to translate interpersonal understanding into strategic action. Response B1 demonstrates the highest integration of psychological insight with organizational logic, converting emotional vulnerabilities into functional strengths. This aligns with the MDPA algorithm's approach of matching personality profiles to optimal roles through \"non-linear threshold penalties for critical traits\" Banai & Perin (2016)."
+ },
+ {
+  "title": "Scenario 3.2: The Ethical Dilemma",
+  "text": "During the project, you discover that the data your team is using contains a significant error that, if corrected, would make your team's conclusions less impressive. The client will likely never notice the error. Correcting it means missing the deadline. Your team members are divided—two want to ignore it, one wants to correct it, and one defers to you. What do you do? (A) Correct the error immediately, inform the client about the delay, and explain why accuracy matters more than speed. (B) Quantify the impact of the error—if it changes the conclusion by less than 5%, proceed; if more, correct it. (C) Present both the corrected and uncorrected findings to the client, letting them decide which version to use. (D) Correct the error but find a way to compress other work to still meet the deadline, even if it means working through the night. (E) Consult with the team member who wants to correct it to understand their reasoning, then make a collective decision. Rationale: "
+ },
+ {
+  "title": "Scenario 4.1: The Unfamiliar System",
+  "text": "You are given access to a software tool you have never used before. It has no tutorial. The interface has icons, menus, and a command line. You need to produce a specific output (a formatted report) within 45 minutes. How do you begin? (A) Systematically click through every menu and icon, building a mental map of the software's structure before attempting the task. (B) Look for a \"Help\" or documentation section and read it thoroughly before touching anything. (C) Try to produce the report immediately through trial and error, learning from each mistake. (D) Look for patterns between this software and others you have used, applying familiar conventions (e.g., Ctrl+S to save, File menu for export). (E) Search for the command line syntax by typing \"help\" or \"?\" and work from text-based instructions. Rationale: Learning ability assessment requires observing how individuals approach novel problems. Crystallized intelligence draws on \"knowledge from prior learning and experience\" (option D), while fluid intelligence involves \"the ability to perceive relationships independent of prior learning\" (option C) Coertse & Schepers, 2004). The Learning Speed score reflects career adaptability—\"combining planning, control, exploration, and confidence\" Sarsenbay et al. (2026)—which bridges AI acceptance and employability."
+ },
+ {
+  "title": "Scenario 4.2: The Feedback Loop",
+  "text": "You tried several approaches. Your first attempt produced a garbled output. Your second attempt produced a partially correct report but with wrong formatting. On your third attempt, you noticed that the formatting toolbar only appears after selecting text. What did you learn from this sequence? (C-i) The software uses context-sensitive menus—tools appear only when relevant objects are selected. You now predict that chart-editing tools will appear only when a chart is selected. (C-ii) You need to slow down and read the interface more carefully before clicking. (C-iii) The software is poorly designed and you would prefer a different tool. Rationale: Response C-i demonstrates the highest learning ability—extracting a generalizable principle from specific experiences and predicting its application in a novel context. This mirrors the TTT-GP-CGS methodology where \"if the student's score increases day by day, it reflects that the student has good learning ability\" Lubinski (2004). The system tracks not just what the user chose but whether they can articulate transferable learning."
+ },
+ {
+  "title": "Scenario 5.1: The Composition",
+  "text": "You are asked to create a short presentation that will move an audience emotionally. The topic is \"the passage of time.\" You have access to images, music, text, physical props, and video. You have 30 minutes to prepare a 3-minute presentation. What is the centerpiece of your presentation? (A) A carefully sequenced series of photographs showing the same location across decades, with no narration—letting the visual progression speak for itself. (B) A piece of music that shifts tempo and key, paired with a single slowly changing image. (C) A spoken narrative—a personal story about a moment when you became aware of time passing—delivered with deliberate pacing and pauses. (D) A physical demonstration: you bring a candle, light it at the start, and let it burn down during your presentation while you speak minimally. (E) A philosophical question posed to the audience: \"If you could relive one hour of your life, which would it be and why?\"—then silence, letting them reflect. Rationale: Gardner's multiple intelligences framework includes musical, bodily-kinesthetic, and existential dimensions Banai & Perin (2016). Research on cognitive styles confirms that visual cognitive style was more important than verbal cognitive style for assessing creative products among art and design students (Jammalamadaka, 2019). This scenario simultaneously assesses creative intelligence and dominant modality preference."
+ },
+ {
+  "title": "Scenario 5.2: The Physical Challenge",
+  "text": "You need to learn a new physical skill: assembling a complex piece of flat-pack furniture with 47 parts and an instruction booklet with diagrams but no text. The diagrams are small and somewhat ambiguous. How do you approach this? (A) Lay out all 47 parts, sort them by type and size, and match each to its diagram before beginning assembly. (B) Start assembling immediately, using the diagrams as rough guides and relying on how the pieces physically feel and fit together. (C) Study the final product image and work backward, reasoning about which structural elements must be assembled first. (D) Search online for a video tutorial of someone assembling the same item. (E) Call a friend who is good at this sort of thing and assemble it together. Rationale: "
+ },
+ {
+  "title": "Scenario 6.1: The Career Crossroads",
+  "text": "You receive two job offers simultaneously. Job A pays 40% more, is in a field you find intellectually stimulating, but requires relocating to a city where you know no one. Job B pays less, is in a field you find moderately interesting, but is near family and friends and offers strong mentorship. What is the FIRST thing you think about? (A) You create a spreadsheet comparing salary, cost of living, career growth projections, and long-term financial outcomes. (B) You imagine yourself in each scenario six months from now—what does your daily life look and feel like? (C) You call three people you trust and ask for their perspectives before forming your own opinion. (D) You reflect on what has made you happiest in past jobs and whether either offer aligns with those patterns. (E) You research both companies' trajectories, industry trends, and which field is more likely to grow over the next decade. Rationale: Career decision-making requires both cognitive and affective maturity (Orzan, 2026). Social Cognitive Career Theory emphasizes that self-efficacy, outcome expectations, and personal interests jointly shape career decisions (Tountopoulou et al., 2021). Response D demonstrates the highest intrapersonal intelligence—the capacity for self-knowledge that career readiness research identifies as a critical developmental need, with 8th-grade students showing \"developmentally appropriate elevated needs for information, specifically self-knowledge\" (Memari & Ruggles, 2025). Computational psychometrics advocates for navigation components including \"self-knowledge of abilities and interests, knowledge about academic major and occupations, and skills related to planning and decision-making\" (Davis, 2021)."
+ },
+ {
+  "title": "Scenario 6.2: The Failure",
+  "text": "You invested significant effort into a project that ultimately failed. Your approach was sound, your execution was diligent, but external factors beyond your control caused the failure. A colleague who invested less effort succeeded due to favorable circumstances. What is your dominant internal response? (A) You analyze exactly what external factors caused the failure and whether you could have anticipated them—extracting lessons for next time. (B) You feel frustrated but recognize that the frustration is about fairness, not competence—you separate your self-worth from the outcome. (C) You talk to the successful colleague to understand what they did differently, genuinely curious rather than resentful. (D) You feel motivated to try again immediately, viewing the failure as a data point rather than a verdict. (E) You reflect on whether this type of work truly aligns with your values, or whether the failure is a signal to redirect your energy. Rationale: Career adaptability—combining planning, control, exploration, and confidence—serves as a psychological resource for navigating career changes Sarsenbay et al. (2026). Hope for success is a demonstrated predictor of career path choices among vocational students (Satterly, 1976). Response D reflects the highest career adaptability, while Response B demonstrates advanced emotional self-regulation, a component of intrapersonal intelligence."
+ },
+ {
+  "title": "Scenario 7.1: The System",
+  "text": "You are managing a greenhouse with four types of plants. You observe the following over two weeks: • When Plant A is watered daily, Plant B (in the adjacent bed) grows faster, but Plant C (two beds away) wilts. • When Plant A is watered every other day, all plants grow at normal rates. • Plant D only flowers when Plant C is healthy. • The greenhouse needs all four plants flowering simultaneously for a client visit in 10 days. What is your watering strategy? (A) Water Plant A every other day for the first 7 days (keeping C healthy so D flowers), then switch to daily watering for the last 3 days to boost B's growth, accepting that C may wilt slightly but D has already flowered. (B) Water Plant A daily but move Plant C farther away from A to test whether proximity is the causal factor. (C) Water Plant A every other day throughout, accepting slower growth for B but ensuring C and D remain healthy. (D) Create a mathematical model of the relationships: A→B (positive, proximity-dependent), A→C (negative, distance-dependent), C→D (conditional), and optimize the watering schedule. Rationale: This scenario assesses fluid intelligence—reasoning about novel relational systems without prior training Coertse & Schepers, 2004). Response A demonstrates the highest integration of temporal planning with causal reasoning. Response B demonstrates scientific thinking (hypothesis testing through controlled manipulation). The NADINE assessment framework similarly measures \"decision making, problem solving... cognitive/analytical skills\" through performance-based tasks Coertse & Schepers, 2004)."
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "SCORING ARCHITECTURE AND INTELLIGENCE WEIGHTING"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Composite Intelligence Profile"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "After completing all scenarios (including adaptive branches), the system generates a multi-dimensional profile across 12 axes:"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "——————————————————————————————————————————————————————— Intelligence Dimension Maximum Possible Score Career Weight Multiplier Source Framework ——————————- —————————- —————————— ————————————————————————- Logical-Mathematical 50 1.2× Gardner MI Banai & Perin (2016)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Spatial-Visual 45 1.1× OSIVQ / Cattell (Almufareh & Almaleh, 2026; , Coertse & Schepers, 2004)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Verbal-Linguistic 40 1.0× Gardner MI Banai & Perin (2016)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Interpersonal (Social) 45 1.15× Gardner MI Zainudin et al. (2024)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Intrapersonal 40 1.1× Gardner MI Zainudin et al. (2024)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Bodily-Kinesthetic 25 0.9× Gardner MI Banai & Perin (2016)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Musical 15 0.8× Gardner MI Banai & Perin (2016)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Naturalistic 25 0.9× Gardner MI Banai & Perin (2016)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Existential 20 0.85× Gardner MI Banai & Perin (2016)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Fluid Intelligence (IQ proxy) 50 1.3× Spearman/Cattell (Gottfredson, 2003), Coertse & Schepers, 2004)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Learning Ability 30 1.2× TTT-GP-CGS Lubinski (2004)"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Career Adaptability 25 1.1× SCCT Sarsenbay et al. (2026) ———————————————————————————————————————————————————————"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "The Career Weight Multiplier reflects the established finding that general cognitive ability occupies the vertex of the ability hierarchy and that specific abilities refine career forecasts (Gottfredson, 2003). Abilities are weighted according to Gottfredson's framework, which demonstrates that abilities are as important as interests in career choice and that cognitive assessment helps counselees understand their career options (Freund & Kasten, 2012)."
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Branching Depth Score"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Users who encounter more branching levels (by consistently demonstrating dominant intelligence in a dimension) receive a Depth Score that increases confidence in that dimension's assessment. A user who reaches Branch Level 3 in the Social Intelligence path has been assessed through three increasingly nuanced social scenarios, yielding higher measurement reliability than a single-scenario assessment."
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Cross-Dimensional Consistency Check"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "The system flags inconsistencies. For example, if a user scores high on Interpersonal intelligence in Part III but selects socially avoidant options in Parts I and VI, the system presents a reconciliation scenario:"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "*You notice that in group settings you excel at reading people, but when making personal decisions you prefer to work alone. Which statement resonates more?*"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "- *\"I understand others well but find social interaction draining.\"*"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "- *\"I am good with people but trust my own judgment more.\"*"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "- *\"My social skills are situational—I perform well under pressure but not in casual settings.\"*"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "This reconciliation mechanism addresses the known limitation that self-reported measures may reflect \"confirmation bias and differences in students' awareness of their own abilities\" (Tountopoulou et al., 2021)."
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "CAREER MAPPING ALGORITHM"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "The composite intelligence profile is mapped to career families using the RIASEC framework linked to the O*NET database, which maps profiles to more than 900 occupations (Oubraime et al., 2025). The MDPA algorithm's approach of fusing \"Spearman's Rank Correlation (Interest Shape) with Weighted Euclidean Distance (Competency Magnitude)\" Banai & Perin (2016) provides the matching methodology."
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Example Profile-to-Career Mapping:"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "—————————————————————————————————————————— Intelligence Profile Pattern RIASEC Alignment Example Career Families ——————————————————– ————————- ——————————————- High Spatial + High Logical + Low Social Realistic-Investigative Engineering, Architecture, Data Science"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "High Social + High Verbal + High Intrapersonal Social-Enterprising Counseling, Human Resources, Education"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "High Spatial + High Bodily-Kinesthetic + High Creative Artistic-Realistic Industrial Design, Surgery, Filmmaking"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "High Logical + High Social + High Learning Ability Investigative-Social Research Management, Consulting, Medicine"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "High Existential + High Verbal + High Intrapersonal Artistic-Social Philosophy, Writing, Psychotherapy ——————————————————————————————————————————"
+ },
+ {
+  "title": "Scoring and career mapping",
+  "text": "Each scenario is scored across multiple intelligence dimensions simultaneously. Scoring uses a weighted multi-dimensional rubric where responses earn points (0–5) across relevant intelligence axes. Some intelligences carry higher weight in career-critical contexts, reflecting the established finding that cognitive abilities are organized hierarchically, with general intelligence at the vertex, while specific abilities refine longitudinal forecasts (Gottfredson, 2003)."
+ },
+ {
+  "title": "Reference 1",
+  "text": "Akos, P., Konold, T. R., & Niles, S. G. (2004). A Career Readiness Typology and Typal Membership in Middle School. The Career Development Quarterly, 53(1), 53–66. https://doi.org/10.1002/j.2161-0045.2004.tb00655.x"
+ },
+ {
+  "title": "Reference 2",
+  "text": "Almufareh, T., & Almaleh, A. (2026). Hybrid Career Path Recommendation System for Computer Science Students: Integrating Academic Profiles and Personal Skills with a Content–Collaborative Model. Electronics, 15(14), 3228. https://doi.org/10.3390/electronics15143228"
+ },
+ {
+  "title": "Reference 3",
+  "text": "Banai, B., & Perin, V. (2016). Type of High School Predicts Academic Performance at University Better than Individual Differences. Plos One, 11(10), e0163996. https://doi.org/10.1371/journal.pone.0163996"
+ },
+ {
+  "title": "Reference 4",
+  "text": "Cantaş, Ç., Celep, C., & BATUR, Ö. (2026). The predictive effects of AI anxiety on 21st-century skills and lifelong learning tendencies: a study of pre-service teachers in Northern Cyprus. Frontiers in Psychology, 17. https://doi.org/10.3389/fpsyg.2026.1810689"
+ },
+ {
+  "title": "Reference 5",
+  "text": "Coertse, S., & Schepers, J. M. (2004). Some personality and cognitive correlates of career maturity. Sa Journal of Industrial Psychology, 30(2). https://doi.org/10.4102/sajip.v30i2.150"
+ },
+ {
+  "title": "Reference 6",
+  "text": "Coetzee, M. (2008). Psychological career resources of working adults: A South African survey. Sa Journal of Industrial Psychology, 34(2). https://doi.org/10.4102/sajip.v34i2.491"
+ },
+ {
+  "title": "Reference 7",
+  "text": "Davier, A. A. von, Deonovic, B., Yudelson, M., Polyak, S. T., & Woo, A. (2019). Computational Psychometrics Approach to Holistic Learning and Assessment Systems. Frontiers in Education, 4. https://doi.org/10.3389/feduc.2019.00069"
+ },
+ {
+  "title": "Reference 8",
+  "text": "Davis, E. (2021). Using human skills taxonomies and tests as measures of artificial intelligence. https://doi.org/10.1787/e182dd0d-en"
+ },
+ {
+  "title": "Reference 9",
+  "text": "Freund, P. A., & Kasten, N. (2012). How smart do you think you are? A meta-analysis on the validity of self-estimates of cognitive ability. Psychological Bulletin, 138(2), 296–321. https://doi.org/10.1037/a0026556"
+ },
+ {
+  "title": "Reference 10",
+  "text": "Gimena, J. A. F., Biore, C., & Bigcas, B. U. (2015). Abstract Reasoning and Arithmetic Ability Lead to Academic Success of the Accountancy Students in a Private Non-Sectarian University. Jpair Institutional Research, 6(1), 19–33. https://doi.org/10.7719/irj.v6i1.360"
+ },
+ {
+  "title": "Reference 11",
+  "text": "Gottfredson, L. S. (2003). The Challenge and Promise of Cognitive Career Assessment. Journal of Career Assessment, 11(2), 115–135. https://doi.org/10.1177/1069072703011002001"
+ },
+ {
+  "title": "Reference 12",
+  "text": "Jammalamadaka, S. K. R. (2019). Assessing the intelligence of a student through TIC-TAC-TOE game for career guidance. International Journal of Electrical and Computer Engineering (Ijece), 9(6), 5545. https://doi.org/10.11591/ijece.v9i6.pp5545-5551"
+ },
+ {
+  "title": "Reference 13",
+  "text": "Lent, R. W. (2025). Career Interventions in the Digital Age: Key Challenges and Transformative Opportunities. The Counseling Psychologist, 53(4), 552–578. https://doi.org/10.1177/00110000251356280"
+ },
+ {
+  "title": "Reference 14",
+  "text": "Lubinski, D. (2004). Introduction to the Special Section on Cognitive Abilities: 100 Years After Spearman's (1904) \"'General Intelligence,' Objectively Determined and Measured\". Journal of Personality and Social Psychology, 86(1), 96–111. https://doi.org/10.1037/0022-3514.86.1.96"
+ },
+ {
+  "title": "Reference 15",
+  "text": "Memari, M., & Ruggles, K. (2025). Artificial Intelligence in Elementary STEM Education: A Systematic Review of Current Applications and Future Challenges. https://doi.org/10.48550/arxiv.2511.00105"
+ },
+ {
+  "title": "Reference 16",
+  "text": "Mrabet, H. E., & Moussa, A. A. (2021). IoT-school guidance: A holistic approach to vocational self-awareness & career path. Education and Information Technologies, 26(5), 5439–5456. https://doi.org/10.1007/s10639-021-10548-6"
+ },
+ {
+  "title": "Reference 17",
+  "text": "Orzan, M. C. (2026). Improving career guidance accuracy through EEG-based vocational interest assessment and self-reported RIASEC profiles. Frontiers in Neuroscience, 20. https://doi.org/10.3389/fnins.2026.1883915"
+ },
+ {
+  "title": "Reference 18",
+  "text": "Oubraime, M., M'hamdi, A., & Sabour, A. (2025). Predicting Student Satisfaction in Career Choices Using Machine Learning: A Case Study. https://doi.org/10.21203/rs.3.rs-5841034/v1"
+ },
+ {
+  "title": "Reference 19",
+  "text": "Sarsenbay, S., Varlamis, I., Turan, C., Razhametov, B., & Kazym, Y. (2026). Optimizing Academic Trajectories: A Multi-Dimensional Psychometric Recommender System for Student Career Guidance. Informatics, 13(6), 81. https://doi.org/10.3390/informatics13060081"
+ },
+ {
+  "title": "Reference 20",
+  "text": "Satterly, D. (1976). Cognitive styles, spatial ability, and school achievement. Journal of Educational Psychology, 68(1), 36–42. https://doi.org/10.1037/0022-0663.68.1.36"
+ },
+ {
+  "title": "Reference 21",
+  "text": "Serpell, R., & Haynes, B. (n.d.). The Cultural Practice of Intelligence Testing: Problems of International Export. 163–185. https://doi.org/10.1037/10681-007"
+ },
+ {
+  "title": "Reference 22",
+  "text": "Shen, D., Xu, M., 孟欣, Sun, J., & Zhou, Z. (2026). How can the acceptance of artificial intelligence be transformed into employability? The sequential effect of a positive attitude toward artificial intelligence and career adaptability. Frontiers in Psychology, 17. https://doi.org/10.3389/fpsyg.2026.1808195"
+ },
+ {
+  "title": "Reference 23",
+  "text": "Skarzyński, M., & Noworol, C. (2022). Career Path Choices of Vocational School Students in the Context of Their Entrepreneurial Abilities, General Aptitude, and Hope for Success. Journal for Perspectives of Economic Political and Social Integration, 28(1), 57–88. https://doi.org/10.18290/pepsi-2022-0003"
+ },
+ {
+  "title": "Reference 24",
+  "text": "Song, H., Hu, A., & Li, X. (2026). Beyond Positive or Negative: Latent Profiles of University Students' AI Attitude and Their Career-Development Correlates. Behavioral Sciences, 16(9), 1460. https://doi.org/10.3390/bs16091460"
+ },
+ {
+  "title": "Reference 25",
+  "text": "Srianturi, Y., & Supriatna, M. (2020). Analysis of Career Maturity on High School Students. https://doi.org/10.2991/assehr.k.200814.029"
+ },
+ {
+  "title": "Reference 26",
+  "text": "Steppan, M., Jogho, G., Ruchti, I., & Hell, B. (2026). Psychometric Evaluation of the AI-Based Career Matching Platform meinBeruf.ch. Psychological Test Adaptation and Development, 7, 289–295. https://doi.org/10.1027/2698-1866/a000147"
+ },
+ {
+  "title": "Reference 27",
+  "text": "Stylianou, V. (2026). Sustainable Career Readiness in the GenAI Era: Student Perceptions of Automation, Entry-Level Employment, and Pedagogical Support. Sustainability, 18(18), 9379. https://doi.org/10.3390/su18189379"
+ },
+ {
+  "title": "Reference 28",
+  "text": "Tountopoulou, M., Drosos, N., & Vlachaki, F. (2021). Assessment of Migrants', Refugees' and Asylum Seekers' Hard Skills: Cultural Adaptation and Psychometric Properties of the NADINE Hard Skill Tests. Open Journal of Social Sciences, 09(07), 240–256. https://doi.org/10.4236/jss.2021.97017"
+ },
+ {
+  "title": "Reference 29",
+  "text": "Tuccio, M., Mullock, K., Navarro-Palau, P., & Perez, E. X. C. (2023). The OECD Skills Profiling Tool: A new instrument to improve career decisions. https://doi.org/10.1787/598ff539-en"
+ },
+ {
+  "title": "Reference 30",
+  "text": "Westman, S., Kauttonen, J., Klemetti, A., Korhonen, N., Manninen, M., Mononen, A., Niittymäki, S., & Paananen, H. (2021). Artificial Intelligence for Career Guidance – Current Requirements and Prospects for the Future. Iafor Journal of Education, 9(4), 43–62. https://doi.org/10.22492/ije.9.4.03"
+ },
+ {
+  "title": "Reference 31",
+  "text": "Wong, L. P. W. (2024). Artificial Intelligence and Job Automation: Challenges for Secondary Students' Career Development and Life Planning. Merits, 4(4), 370–399. https://doi.org/10.3390/merits4040027"
+ },
+ {
+  "title": "Reference 32",
+  "text": "Zainudin, Z. N., Foon, L. W., Yusop, Y. M., Othman, W. N. W., Kamarudin, E. M. E., & Anuar, M. (2024). A Review on Application of Holland's RIASEC Theory in Educational Settings. International Journal of Academic Research in Business and Social Sciences, 14(5). https://doi.org/10.6007/ijarbss/v14-i5/21397"
+ }
+]
