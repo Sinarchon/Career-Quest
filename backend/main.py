@@ -8,6 +8,15 @@ from fastapi import Depends, FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field
 
+def load_env():  # backend/.env at startup, for shells that can't source it (Windows); real env vars win
+    p = os.path.join(os.path.dirname(__file__), ".env")
+    if os.path.exists(p):
+        for line in open(p, encoding="utf-8"):
+            k, _, v = line.strip().partition("=")
+            if k and not k.startswith("#"): os.environ.setdefault(k, v)
+
+
+load_env()
 E = os.environ.get
 FRONT, SECRET, COOKIE, DAYS = E("FRONTEND_URL", "http://localhost:3000"), E("JWT_SECRET", ""), "cq_session", 7
 DUMMY = bcrypt.hashpw(b"dummy", bcrypt.gensalt()).decode()  # keeps login timing similar for unknown emails
