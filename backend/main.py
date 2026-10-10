@@ -8,8 +8,14 @@ from fastapi import Depends, FastAPI, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
-from backend.progress import ProgressSnapshot
-from backend.rag_service import RagService
+try:
+    from backend.progress import ProgressSnapshot
+except ModuleNotFoundError:
+    from progress import ProgressSnapshot
+try:
+    from backend.rag_service import RagService
+except ModuleNotFoundError:
+    from rag_service import RagService
 
 def load_env():  # backend/.env at startup, for shells that can't source it (Windows); real env vars win
     p = os.path.join(os.path.dirname(__file__), ".env")

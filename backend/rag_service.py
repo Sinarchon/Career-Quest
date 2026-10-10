@@ -22,7 +22,10 @@ try:
 except ImportError:
     XGBoostScorer = None  # type: ignore
 
-from .progress import ProgressSnapshot
+try:
+    from .progress import ProgressSnapshot
+except ImportError:
+    from progress import ProgressSnapshot
 
 logger = logging.getLogger(__name__)
 DATA_DIR = Path(__file__).resolve().parent
